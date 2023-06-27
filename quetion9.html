@@ -1,0 +1,852 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docintosh</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css">
+    <link rel="stylesheet" href="https://docintosh.com/NewWebsite/afterlogin/css/style.css?v=16">
+    <link rel="stylesheet" href="https://docintosh.com/NewWebsite/afterlogin/css/responsive.css?v=67">
+    <link rel="stylesheet" href="https://docintosh.com/NewWebsite/afterlogin/css/custom_style.css?v=17">
+    <link rel="stylesheet" href="https://docintosh.com/NewWebsite/afterlogin/css/uikit-css.css?v=4">
+    <style>
+        #selector select option {
+            color: #333;
+            position: relative;
+            top: 5px;
+        }
+
+        html {
+            overflow-x: hidden !important;
+        }
+
+        .changeColor {
+            color: blue;
+        }
+
+        p a {
+            color: #516699;
+        }
+
+        /*==================================================
+remove the original arrow in select option dropdown
+==================================================*/
+
+        #selector {
+            margin: 5px 10%;
+            width: 15%;
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -o-appearance: none;
+            appearance: none;
+        }
+
+        select.input-lg {
+            height: 50px !important;
+            line-height: 25px !important;
+        }
+
+        select+i.fa {
+            float: right;
+            margin-top: -32px;
+            margin-right: 9px;
+
+            pointer-events: none;
+            ;
+            background-color: #FFF;
+            padding-right: 5px;
+        }
+
+        @media screen and (max-width: 576px) {
+
+            #demo,
+            #div2,
+            #div3,
+            #div4 {
+                display: none;
+            }
+
+            /* #loader-hide{
+    display: block ;
+  } */
+        }
+
+        @media screen and (min-width: 1200px) and (max-width: 1902px) {
+            #loader-hide {
+                display: none !important;
+            }
+        }
+
+        ul.dropdown-home {
+            display: block;
+            position: absolute;
+            left: -100px !important;
+        }
+        .quetion-text{
+            font-size: 20px;
+            text-align: start;
+        }
+        .vote-para{
+            font-size: 18px;
+            color: #071c38;
+            font-weight: 400;
+        }
+        .form-select {
+    display: inline-block;
+    width: auto;
+    border: none;
+    outline: none;
+    color: #333333!important;
+    font-size: 18px!important;
+    font-weight: 600!important;
+
+}
+.form-select:focus {
+    border-color: #ffffff;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(255 255 255 / 25%);
+}
+.btn-primary {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #071c38;
+}
+    </style>
+    <script src="https://docintosh.com/homeassets/js/jquery.js"></script>
+    <script src="https://wurfl.io/wurfl.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            if (WURFL.form_factor == "Smartphone") {
+
+                $('#reward').html($('#reward_div').html());
+                $('#reward_div').hide();
+            } else {
+                $('#hide_div').hide();
+                $('#reward').hide();
+            }
+        });
+    </script>
+</head>
+
+<body id="body-section">
+    <div class="mobile-icon-bottom">
+        <div class="text-centermb active-link"><a href="https://docintosh.com/">
+                <img src="https://docintosh.com/NewWebsite/afterlogin/assets/icons/homefilled.png" class="img-fluid">
+            </a>
+            <h6 class="bottom-menu-link active-link"><a href="https://docintosh.com/">home</a></h6>
+        </div>
+
+        <div class="text-centermb"><a href="https://docintosh.com/HomeController/Engage">
+                <img src="https://docintosh.com/NewWebsite/afterlogin/assets/icons/engage.png" class="img-fluid">
+            </a>
+            <h6 class="bottom-menu-link "><a href="https://docintosh.com/HomeController/Engage">Engage</a></h6>
+        </div>
+        <div class="text-centermb"><a href="#">
+                <img src="https://docintosh.com/NewWebsite/afterlogin/assets/icons/community.png" class="img-fluid">
+            </a>
+            <h6 class="bottom-menu-link "><a href="#">Community</a></h6>
+        </div>
+        <div class="text-centermb"><a href="#">
+                <img src="https://docintosh.com/NewWebsite/afterlogin/assets/icons/knowledge.png" class="img-fluid">
+            </a>
+            <h6 class="bottom-menu-link "><a href="#">Knowledge</a></h6>
+        </div>
+    </div>
+
+    <header id="header" class="d-flex align-items-center main-header">
+        <div class="container header-flex main-header-child">
+            <h1 class="logo logo-box"><a href="https://docintosh.com/"><img
+                        src="https://docintosh.com/NewWebsite/afterlogin/assets/images/logo.png" alt></a>
+                <div class="mobile-whats-new">
+                    <img src="https://docintosh.com/NewWebsite/afterlogin/assets/icons/new-2.png" class="img-fluid">
+                </div>
+            </h1>
+            <div class=" d-flex align-items-center justify-content-between">
+                <div class="mobile-icon">
+                    <div id class="navbar">
+                        <div class="dropdown" data-bs-toggle="modal" data-bs-target="#myModalsearch">
+                            <a href="#" class="notification"><i class="bi bi-search"></i></a>
+                        </div>
+                        <div class="dropdown"><a href="#" class="notification"><i class="bi bi-bell"></i></a>
+                            <ul class="dropdown-home" id="NotificationList1" style="height:80vh;overflow-y: scroll;">
+                            </ul>
+                        </div>
+                        <div class="dropdown"><a href="#"> <span class>
+                                    <img src="https://docintosh-assets.s3.us-west-2.amazonaws.com/IMAUP/profile/2023_03_01_09_25_19rnimagepickerlibtempebdaeaacabbdcb.png?response-content-disposition=attachment%3B%20filename%3D%222023_03_01_09_25_19rnimagepickerlibtempebdaeaacabbdcb.png%22&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATI7R7JS76FDN7AZB%2F20230509%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20230509T084610Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=518400&amp;X-Amz-Signature=5271955cfe2a33a691c07e4bca4d080f331252c26ce5571edc2c9d48a93575ba"
+                                        width="40" height="40" alt class="profileimage">
+                                </span>
+                            </a>
+                            <ul class="dropdown-home">
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/my_ac_page"
+                                        class="profileh list-lineh-dropdown"> <i
+                                            class="bi bi-person-fill f-s-16 pr-5"></i> My
+                                        Profile</a></li>
+                                <hr>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/my_ac_page"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-diagram-3-fill f-s-16 pr-5"></i> Leaderboard</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-person-bounding-box f-s-16 pr-5"></i> Invite</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-gift-fill f-s-16 pr-5"></i> Gift
+                                        DocCoins</a></li>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/Engage"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-newspaper f-s-16 pr-5"></i> What’s
+                                        New</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-patch-question-fill f-s-16 pr-5"></i> Take a
+                                        Tour</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-file-check-fill f-s-16 pr-5"></i> Business
+                                        Page</a></li>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/setting_page"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-gear-fill f-s-16 pr-5"></i> Settings</a></li>
+                                <hr>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/contact_Us_i"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-telephone-fill f-s-16 pr-5"></i> Contact
+                                        Us</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-info-circle-fill f-s-16 pr-5"></i> Support</a></li>
+                                <hr>
+                                <li class="text-center bghover-menulist"><a
+                                        href="https://docintosh.com/LoginController/logout" class="aclass"><button
+                                            class="btn btnlogout rounded list-lineh-dropdown"><i
+                                                class="bi bi-person-fill f-s-16 pr-5"></i> Logout</button></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <nav id="navbar" class="navbar">
+                    <ul>
+                        <li><a class="nav-link scrollto home-menu-textf  " href="https://docintosh.com/"> <i
+                                    class="bi bi-house-door house-icon"></i> Home</a></li>
+                        <li><a class="nav-link scrollto menu-nonactive-color home-menu-textf  "
+                                href="https://docintosh.com/HomeController/Engage"><i
+                                    class="bi bi-bullseye house-icon"></i> Engage</a></li>
+                        <li><a class="nav-link scrollto menu-nonactive-color home-menu-textf" href="community.html"><i
+                                    class="bi bi-people house-icon"></i>
+                                Community</a></li>
+                        <li><a class="nav-link scrollto menu-nonactive-color home-menu-textf "
+                                href="https://docintosh.com/HomeController/Knowledge"><i
+                                    class="bi bi-stack house-icon"></i>
+                                Knowledge</a>
+                        </li>
+                    </ul>
+                    <i class="bi mobile-nav-toggle bi-list"></i>
+                </nav>
+                <nav id="navbar" class="navbar right-nav">
+                    <ul>
+                        <li class="mobile_hide_profile">
+                            <div class="search-box">
+                                <input type="text" class="search-box-input" placeholder="Search">
+                                <button class="search-box-btn">
+                                    <i class="search-box-icon bi bi-search"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="dropdown mobile_hide_profile"><a href="#" class="notification"><i
+                                    class="bi bi-bell"></i>
+                                <span class="notification-dot"></span></a>
+                            <ul class="dropdown-home" id="NotificationList" style="height:80vh;overflow-y: scroll;">
+                            </ul>
+                        </li>
+                        <li class="dropdown mobile_hide_profile"><a href="#"> <span class>
+                                    <img src="https://docintosh-assets.s3.us-west-2.amazonaws.com/IMAUP/profile/2023_03_01_09_25_19rnimagepickerlibtempebdaeaacabbdcb.png?response-content-disposition=attachment%3B%20filename%3D%222023_03_01_09_25_19rnimagepickerlibtempebdaeaacabbdcb.png%22&amp;X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIATI7R7JS76FDN7AZB%2F20230509%2Fus-west-2%2Fs3%2Faws4_request&amp;X-Amz-Date=20230509T084610Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=518400&amp;X-Amz-Signature=5271955cfe2a33a691c07e4bca4d080f331252c26ce5571edc2c9d48a93575ba"
+                                        width="40" height="40" alt class="profileimage">
+                                </span>
+                                <span class="drstyle">
+                                </span><i class="bi bi-chevron-down"></i></a>
+                            <ul class="dropdown-home">
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/my_ac_page"
+                                        class="profileh list-lineh-dropdown"> <i
+                                            class="bi bi-person-fill f-s-16 pr-5"></i> My
+                                        Profile</a></li>
+                                <hr>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/my_ac_page"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-diagram-3-fill f-s-16 pr-5"></i> Leaderboard</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-person-bounding-box f-s-16 pr-5"></i> Invite</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-gift-fill f-s-16 pr-5"></i> Gift
+                                        DocCoins</a></li>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/Engage"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-newspaper f-s-16 pr-5"></i> What’s
+                                        New</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-patch-question-fill f-s-16 pr-5"></i> Take a
+                                        Tour</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-file-check-fill f-s-16 pr-5"></i> Business
+                                        Page</a></li>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/setting_page"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-gear-fill f-s-16 pr-5"></i> Settings</a></li>
+                                <hr>
+                                <li class="bghover-menulist"><a href="https://docintosh.com/HomeController/contact_Us_i"
+                                        class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-telephone-fill f-s-16 pr-5"></i> Contact
+                                        Us</a></li>
+                                <li class="bghover-menulist"><a href="#" class="textdecornone list-lineh-dropdown"><i
+                                            class="bi bi-info-circle-fill f-s-16 pr-5"></i> Support</a></li>
+                                <hr>
+                                <li class="text-center bghover-menulist"><a
+                                        href="https://docintosh.com/LoginController/logout" class="aclass"><button
+                                            class="btn btnlogout rounded list-lineh-dropdown"><i
+                                                class="bi bi-person-fill f-s-16 pr-5"></i> Logout</button></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <style>
+        .side-padding {
+            padding: 0 20px;
+        }
+
+        .form-check-input:focus {
+            box-shadow: none !important;
+        }
+
+        h3.fontheading-dermatology {
+            margin-top: 77px;
+        }
+
+        @media screen and (max-width: 576px) {
+
+            .fontheading-dermatology {
+
+                margin-top: 60px;
+                margin-bottom: 14px;
+            }
+
+            button.btn.btn-primary.btn-md.survey-btn {
+                margin-bottom: 25px;
+            }
+
+            .text-center img {
+                width: 100% !important;
+                float: left;
+            }
+        }
+
+        .btn-primary:hover {
+            color: #fff !important;
+            background-color: #071c38 !important;
+            border-color: #0a58ca !important;
+
+        }
+    </style>
+    <style>
+        .question_ {
+            padding: 10px;
+        }
+
+        input[type=radio] {
+            opacity: 1;
+        }
+
+
+        .survey-forn-select {
+            background-color: #dc3545;
+            padding: 12px 15px;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 6px;
+            border: 0px;
+        }
+
+        thead.thead-survey {
+            vertical-align: inherit;
+            background-color: #071c38;
+            color: #fff;
+        }
+
+        td.table-data-survey {
+            vertical-align: inherit;
+        }
+
+        th.thead-surveyno {
+            vertical-align: inherit;
+        }
+
+        .survey-btn {
+            background-color: #071c38;
+        }
+
+        .btn-primary:hover {
+            background-color: #071c38;
+
+        }
+
+        .table-bordered thead td,
+        .table-bordered thead th {
+            border-bottom-width: 2px;
+            vertical-align: middle;
+        }
+
+        .moji {
+            font-size: 1em;
+            text-align: center;
+        }
+
+        .slider1 {
+            display: flex;
+            gap: 12px;
+        }
+
+        .form-check-input:focus {
+
+            border-color: #86b7fe;
+            outline: 0;
+            box-shadow: none;
+
+        }
+    </style>
+    <style>
+        .input_height {
+            height: 35px !important;
+        }
+
+        .progress-bar1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+        }
+
+        .progress-step1 {
+            text-align: center;
+            position: relative;
+        }
+
+        .progress-step1:before,
+        .progress-step1:after {
+            background-color: #071c38;
+            content: "";
+            height: 2px;
+            position: absolute;
+            z-index: -1;
+            top: 25px;
+        }
+
+        .progress-step1:after {
+            left: 50%;
+            width: 100%;
+        }
+
+        .progress-step1:last-of-type.is-active:after {
+            background-color: #071c38;
+        }
+
+        @media screen and (min-width: 640px) {
+            .progress-step1:first-of-type:before {
+                right: 50%;
+                width: 50%;
+            }
+        }
+
+        @media screen and (max-width: 640px) {
+
+            .progress-step1:first-of-type:before,
+            .progress-step:last-of-type:after {
+                background-color: white !important;
+            }
+        }
+
+        .progress-step1:last-of-type:after {
+            left: 50%;
+            width: 50%;
+        }
+
+        .progress-step1 .step-count1 {
+            background-color: #071c38;
+            height: 60px;
+            width: 60px;
+            margin: 0 auto;
+            border-radius: 50%;
+            color: white;
+            line-height: 45px;
+            z-index: 100;
+            border: 7px solid white;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* .progress-step .step-count:before {
+  counter-increment: step-count;
+  content: counter(step-count);
+} */
+        .progress-step1.is-active .step-description {
+            font-weight: 500;
+        }
+
+        .progress-step1.is-active:after {
+            background-color: #dad6ce;
+        }
+
+        .progress-step1.is-active~.progress-step1 .step-count1 {
+            background-color: #dad6ce;
+            color: #071c38;
+        }
+
+        .progress-step1.is-active~.progress-step1:after {
+            background-color: #dad6ce;
+        }
+
+        .step-description {
+            font-size: 0.8rem;
+        }
+
+        .right-survey12 {
+            text-align: end;
+        }
+
+        .fontleft-dermatology {
+            font-size: 16px;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.9;
+        }
+
+        .option-survey-list {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            gap: 32px;
+            font-weight: 700;
+        }
+
+        .option-survey-list1,
+        .option-survey-list2 {
+            display: none;
+        }
+
+        @media screen and (max-width: 576px) {
+            .progress-step1 .step-count1 {
+                background-color: #071c38;
+                height: 35px;
+                width: 35px;
+                margin: 0 auto;
+                border-radius: 50%;
+                color: white;
+                line-height: 21px;
+                z-index: 100;
+                border: 7px solid white;
+                font-size: 0.8rem;
+                font-weight: 600;
+            }
+
+            .progress-step1:before,
+            .progress-step1:after {
+                background-color: #071c38;
+                content: "";
+                height: 2px;
+                position: absolute;
+                z-index: -1;
+                top: 18px;
+            }
+
+            .fontleft-dermatology {
+                font-size: 14px;
+                font-weight: 700;
+                margin: 0;
+                line-height: 1.9;
+                text-align: center;
+
+            }
+
+            .fontheading-dermatology {
+                margin-top: 16px;
+                margin-bottom: 14px;
+            }
+
+            .right-survey12 {
+                text-align: start;
+            }
+
+            .option-survey-list {
+                display: none;
+            }
+
+            .option-survey-list1,
+            .option-survey-list2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 12px;
+                font-weight: 700;
+            }
+
+            .option-survey-list1 p {
+                margin: 0;
+            }
+
+            .option-survey-list2 p {
+                margin: 0;
+            }
+        }
+
+        /* .form-check {
+            display: flex;
+            min-height: 1.5rem;
+            padding-left: 1.5em;
+            margin-bottom: 0.125rem;
+            gap: 24px;
+            justify-content: center;
+
+        } */
+    </style>
+    <section>
+        <div class="container">
+            <br />
+            <div class="row">
+                <div class="col-lg-12">
+                    <center>
+                        <h3 class="fontheading-dermatology"><b>Vote on Pharma Ideas </b>
+                        </h3>
+                    </center>
+                </div>
+            </div>
+            <div class="row mt-2">
+             
+               
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="container1">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="progress-bar1">
+                            <div class="progress-step1">
+                                <div class="step-count1">1</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">2</div>
+                            </div>
+                            <div class="progress-step1 is-active">
+                                <div class="step-count1">3</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">4</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">5</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">6</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">7</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">8</div>
+                            </div>
+                            <div class="progress-step1">
+                                <div class="step-count1">9</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form action="https://docintosh.com/HomeController/anwser_insert" method="post">
+                <div class="card p-3 border-0 mt-4">
+                    <div class="question_">
+                        <h4>
+                            <p class="quetion-text"><b><span>9.A. As a medium of promotion which of the following do you think is the most effective for Rx products? </span></b></p>
+                        </h4>
+                        <input type="hidden" name="questionid" value="3">
+                    </div>
+
+
+                    <div class="side-padding">
+                        <input type="hidden" name="option[]" value="0">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="labEmail1" name="option_value[][]" value="0"
+                                required=""> <label for="labEmail1"> Email</label>
+                        </div>
+                        <input type="hidden" name="option[]" value="1">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="labWhatsapp1" name="option_value[][]" value="1"
+                                required=""> <label for="labWhatsapp1"> Whatsapp  </label>
+                        </div>
+                        <input type="hidden" name="option[]" value="3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="labprsonDt1" name="option_value[][]" value="1"
+                                required=""> <label for="labprsonDt1">  In-Person detailing </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="labSeminars1" name="option_value[][]" value="1"
+                                required=""> <label for="labSeminars1">  Seminars</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="labMagazine1" name="option_value[][]" value="1"
+                                required=""> <label for="labMagazine1"> Magazine ads </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" id="labInternet1" name="option_value[][]" value="1"
+                                required=""> <label for="labInternet1"> Internet ads </label>
+                        </div>
+                     
+                       
+                    </div>
+                    <div class="text-end mb-4 mt-3 side-padding">
+
+                        <a href="./quetion-b9.html"><button type="button"
+                                class="btn btn-primary btn-md survey-btn">Next</button></a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+        </div>
+    </section>
+    <script>
+        function changeemoji(argument) {
+            // alert(argument);
+
+            const range = document.querySelector(`#input${argument}`);
+
+            const div = document.querySelector(`#emoji${argument}`);
+            const mojis = ['0', '1', '2', '3', '4', '5'];
+
+            let rangeValue = range.value;
+            div.textContent = mojis[rangeValue];
+
+        }
+
+        function makeinputdisabled(arg, id) {
+
+            if (arg == 0) {
+                $(`#makeinputdisabled${id}`).hide();
+            } else {
+                $(`#makeinputdisabled${id}`).show();
+            }
+        }
+
+
+
+        function makeinputdisabledTwo(arg, id) {
+
+            if (arg == 0) {
+                $(`#makeinputdisabled_${id}`).hide();
+            } else {
+                $(`#makeinputdisabled_${id}`).show();
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script async src="https://static.addtoany.com/menu/page.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/12.0.0/classic/ckeditor.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script>
+    <script>
+        $.validator.addMethod('compaire_regx', function (value, element, parameter) {
+            return $('#new_password').val() == $('#confirm_password').val();
+        }, '');
+
+        $('#resetpassword').validate({
+
+            rules: {
+                old_password: {
+                    required: true,
+                    remote: {
+                        url: "https://docintosh.com/HomeController/password_check",
+                        type: "post"
+                    }
+                },
+                new_password: {
+                    required: true,
+                    compaire_regx: true,
+                },
+                confirm_password: {
+                    required: true,
+                    compaire_regx: true,
+                },
+            },
+            messages: {
+                old_password: {
+                    required: "Please enter your old password.",
+                    remote: "Please check old password"
+                },
+                new_password: {
+                    required: "Please enter your new password.",
+                },
+                confirm_password: {
+                    required: "Please enter your confirm password.",
+                    compaire_regx: "Please check new and confirm password",
+                }
+            },
+            submitHandler: function (form) {
+                $('#continueSettingPAss').attr('value', 'Loading...');
+                $("#continueSettingPAss").prop('disabled', true);
+                var form = $("form#resetpassword")[0];
+                var formData = new FormData(form);
+                $.ajax({
+                    url: "https://docintosh.com/HomeController/resetpassword",
+                    type: "POST",
+                    data: formData,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        setTimeout(() => {
+                            location.reload();
+                        }, 3000);
+                    }
+                });
+            }
+        });
+
+        // $('#continueSettingPAss').click(function (params) {
+        //   alert();
+        // });
+
+        //       CKEDITOR.replace(
+        // 'editor',
+        // {
+        //   toolbar : [
+        //       {name: 'Copy', items: ['Copy', 'Paste']}
+        //     ],
+        //   extraPlugins:'sharedspace',
+        //   removePlugins: 'maximize,resize',
+        //   sharedSpaces: {
+        //     top: 'top',
+        //     bottom: 'bottom'
+        //   },
+        // });
+    </script>
+
+    <script src="https://docintosh.com/NewWebsite/afterlogin/js/uikit-js.js"></script>
+    <script src="https://docintosh.com/NewWebsite/afterlogin/js/index.js"></script>
+</body>
+
+</html>
